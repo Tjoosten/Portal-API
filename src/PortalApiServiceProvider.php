@@ -1,15 +1,16 @@
 <?php
 
-namespace Leasedeck\ApiPortalApi;
+namespace Leasedeck\PortalApi;
 
 use Illuminate\Support\ServiceProvider;
+use Leasedeck\PortalApi\Console\Commands\GenerateApiKey;
 
 /**
- * Class ApiPortalApiServiceProvider
+ * Class PortalApiServiceProvider
  *
  * @package Leasedeck\ApiPortalApi
  */
-class ApiPortalApiServiceProvider extends ServiceProvider
+class PortalApiServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -21,7 +22,7 @@ class ApiPortalApiServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         if ($this->app->runningInConsole()) {
-            // TODO: Implement console specific tasks.
+            $this->commands([GenerateApiKey::class]);
         }
     }
 
