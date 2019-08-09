@@ -1,0 +1,51 @@
+{
+    "name": "leasedeck/portal-api",
+    "description": "De API gerelateerde broncode voor de API ondersteuning van het portaal.",
+    "keywords": ["leasedeck", "api-portal-api"],
+    "homepage": "https://github.com/leasedeck/api-portal-api",
+    "license": "The Unlicense",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Tim Joosten",
+            "email": "Topairy@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leasedeck\\PortalApi\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Leasedeck\\PortalApi\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Leasedeck\\ApiPortalApi\\ApiPortalApiServiceProvider"
+            ],
+            "aliases": {
+                "PortalApi": "Leasedeck\\ApiPortalApi\\ApiPortalApiFacade"
+            }
+        }
+    }
+}
