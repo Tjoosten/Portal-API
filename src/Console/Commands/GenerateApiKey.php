@@ -4,6 +4,7 @@ namespace Leasedeck\PortalApi\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
+use Leasedeck\PortalApi\Models\ApiKey;
 
 /**
  * Class GenerateApiKey
