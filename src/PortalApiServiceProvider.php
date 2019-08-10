@@ -2,6 +2,7 @@
 
 namespace Leasedeck\PortalApi;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Leasedeck\PortalApi\Console\Commands\GenerateApiKey;
 
@@ -21,18 +22,37 @@ class PortalApiServiceProvider extends ServiceProvider
     {
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
+        Route::middlewareGroup('portalApi', config('api.middleware', []));
+
         if ($this->app->runningInConsole()) {
             $this->commands([GenerateApiKey::class]);
         }
+
+        $this->registerRoutes();
     }
 
     /**
-     * Register the application services.
+     * Register the package routes.
      *
      * @return void
      */
-    public function register(): void
+    private function registerRoutes(): void
     {
-        //
+        Route::group($this->routeConfiguration(), static function (): void {
+            $this->loadRoutesFrom(__DIR__.'/Http/routes.php');
+        });
+    }
+
+    /**
+     * Get the portal route group configuration array
+     *
+     * @return array
+     */
+    private function routeConfiguration(): array
+    {
+        return [
+            'namespace' => 'LeaseDeck\PortalApi\Http\Controllers',
+            'middleware' => 'portalApi',
+        ];
     }
 }
