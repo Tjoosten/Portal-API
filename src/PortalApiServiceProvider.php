@@ -14,13 +14,14 @@ use Leasedeck\PortalApi\Console\Commands\GenerateApiKey;
 class PortalApiServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap the application services.
+     * register the application services.
      *
      * @eturn void
      */
-    public function boot()
+    public function register(): void
     {
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->mergeConfigFrom(__DIR__ . '/config/voyager-api.php', 'voayger-api');
 
         Route::middlewareGroup('portalApi', config('api.middleware', []));
 
@@ -51,7 +52,7 @@ class PortalApiServiceProvider extends ServiceProvider
     private function routeConfiguration(): array
     {
         return [
-            'namespace' => 'LeaseDeck\PortalApi\Http\Controllers',
+            'namespace'  => 'LeaseDeck\PortalApi\Http\Controllers',
             'middleware' => 'portalApi',
         ];
     }
