@@ -2,7 +2,7 @@
 
 namespace Leasedeck\PortalApi\Events;
 
-use http\Env\Request;
+use Illuminate\Http\Request;
 use Leasedeck\PortalApi\Models\ApiKey;
 use Illuminate\Queue\SerializesModels;
 

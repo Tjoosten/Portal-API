@@ -22,7 +22,7 @@ class ApiKey extends Model implements KeyFactory
     protected $fillable = ['sleutel', 'apikeyable_id', 'apikeyable_type', 'sleutel', 'laatste_ip_address', 'laatst_gebruikt_op'];
 
     /**
-     * Polymorphic instance for the api key.
+     * Polymorphic instance for the api keys.
      *
      * @return MorphTo
      */
@@ -51,5 +51,33 @@ class ApiKey extends Model implements KeyFactory
             'laatste_ip_address'    => request()->ip(),
             'laatst_gebruikt_op'    => now(),
         ]);
+    }
+
+    /**
+     * sure method to generate a unique API key.
+     *
+     * @return string
+     */
+    public static function generateKey(): string
+    {
+        do {
+            $salt = sha1(time() . mt_rand());
+            $newKey = substr($salt, 0, 40);
+        } // Already in the DB? Fail! Trey again!
+        while (self::keyExists($newKey));
+
+        return $newKey;
+    }
+
+    /**
+     * Checks whether a key exists in the database or not
+     *
+     * @param  string $key The key that needs to be checked.
+     * @return bool
+     */
+    private static function keyExists(string $key): bool
+    {
+        $apiKeyCount = self::whereKey($key)->limit(1)->count();
+        return $apiKeyCount > 0;
     }
 }

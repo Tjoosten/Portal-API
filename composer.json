@@ -14,6 +14,7 @@
     ],
     "require": {
         "php": "^7.1",
+        "ellipsesynergie/api-response": "^0.16.0",
         "illuminate/support": "5.8.*"
     },
     "require-dev": {
@@ -42,7 +43,7 @@
         "laravel": {
             "providers": [
                 "Leasedeck\\PortalApi\\PortalApiServiceProvider"
-            ],<
+            ]
         }
     }
 }
