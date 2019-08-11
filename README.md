@@ -1,6 +1,6 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/leasedeck/leasedeck/portal-api.svg?style=flat-square)](https://packagist.org/packages/leasedeck/portal-api)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/leasedeck/portal-api.svg?style=flat-square)](https://packagist.org/packages/leasedeck/portal-api)
 [![Build Status](https://img.shields.io/travis/leasedeck/portal-api/master.svg?style=flat-square)](https://travis-ci.org/leasedeck/api-portal-api)
 [![Total Downloads](https://img.shields.io/packagist/dt/leasedeck/portal-api.svg?style=flat-square)](https://packagist.org/packages/leasedeck/portal-api)
 
