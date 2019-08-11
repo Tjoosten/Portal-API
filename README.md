@@ -1,8 +1,8 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/leasedeck/api-portal-api.svg?style=flat-square)](https://packagist.org/packages/leasedeck/portal-api)
-[![Build Status](https://img.shields.io/travis/leasedeck/api-portal-api/master.svg?style=flat-square)](https://travis-ci.org/leasedeck/api-portal-api)
-[![Total Downloads](https://img.shields.io/packagist/dt/leasedeck/api-portal-api.svg?style=flat-square)](https://packagist.org/packages/leasedeck/portal-api)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/leasedeck/leasedeck/portal-api.svg?style=flat-square)](https://packagist.org/packages/leasedeck/portal-api)
+[![Build Status](https://img.shields.io/travis/leasedeck/portal-api/master.svg?style=flat-square)](https://travis-ci.org/leasedeck/api-portal-api)
+[![Total Downloads](https://img.shields.io/packagist/dt/leasedeck/portal-api.svg?style=flat-square)](https://packagist.org/packages/leasedeck/portal-api)
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
