@@ -3,7 +3,7 @@
     "description": "De API gerelateerde broncode voor de API ondersteuning van het portaal.",
     "keywords": ["leasedeck", "api-portal-api"],
     "homepage": "https://github.com/leasedeck/api-portal-api",
-    "license": "The Unlicense",
+    "license": "MIT",
     "type": "library",
     "authors": [
         {
