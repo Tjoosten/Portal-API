@@ -4,27 +4,14 @@
 [![Build Status](https://img.shields.io/travis/leasedeck/portal-api/master.svg?style=flat-square)](https://travis-ci.org/leasedeck/api-portal-api)
 [![Total Downloads](https://img.shields.io/packagist/dt/leasedeck/portal-api.svg?style=flat-square)](https://packagist.org/packages/leasedeck/portal-api)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+API ondersteuning voor voyager. Een systeem voor jeugdbewegingen hun beheer van lokalen en verhuringen. 
 
-## Installation
+## Documentatie
 
-You can install the package via composer:
+De documentatie voor de voyager is hier te vinden;
 
-```bash
-composer require leasedeck/portal-api
-```
-
-## Usage
-
-``` php
-// Usage description here
-```
-
-### Testing
-
-``` bash
-composer test
-```
+- [API endpoints]()
+- [Gebruik van repository]()
 
 ### Changelog
 
